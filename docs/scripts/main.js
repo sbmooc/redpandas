@@ -32,132 +32,69 @@ function NearestLocation(latitude, longitude, locations) {
   return closestLocation;
 }
 
-
 const redPandaData = [
- {'lat': '53.27415428',
-  'lng': '-3.699849602',
-  'name': 'Welsh Mountain Zoo',
-  'website': 'https://www.welshmountainzoo.org/'},
- {'lat': '52.44479919',
-  'lng': '1.075228087',
-  'name': 'Banham Zoo',
-  'website': 'https://www.banhamzoo.co.uk/'},
- {'lat': '51.7437438',
-  'lng': '-4.732819568',
-  'name': 'Folly Farm, Pembrokeshire',
-  'website': 'https://www.folly-farm.co.uk/'},
- {'lat': '55.94272648',
-  'lng': '-3.267564685',
-  'name': 'Edinburgh Zoo',
-  'website': 'https://www.edinburghzoo.org.uk/'},
- {'lat': '57.10973138',
-  'lng': '-3.965497267',
-  'name': 'Highland Wildlife Park',
-  'website': 'https://www.highlandwildlifepark.org.uk/'},
- {'lat': '53.22683731',
-  'lng': '-2.883382348',
-  'name': 'Chester Zoo',
-  'website': 'https://www.chesterzoo.org/our-zoo/animals/red-panda/'},
- {'lat': '54.658159',
-  'lng': '-5.942979938',
-  'name': 'Belfast Zoo',
-  'website': 'http://www.belfastzoo.co.uk/'},
- {'lat': '51.86262047',
-  'lng': '0.8339362763',
-  'name': 'Colchester Zoo',
-  'website': 'https://www.colchester-zoo.com/'},
- {'lat': '51.77387345',
-  'lng': '-1.653257479',
-  'name': 'Cotswold Wildlife Park',
-  'website': 'https://www.cotswoldwildlifepark.co.uk/'},
- {'lat': '53.50441743',
-  'lng': '-1.039960373',
-  'name': 'Yorkshire Wildlife Park',
-  'website': 'https://www.yorkshirewildlifepark.com/'},
- {'lat': '50.41126832',
-  'lng': '-5.069944231',
-  'name': 'Newquay Zoo',
-  'website': 'https://www.newquayzoo.org.uk/'},
- {'lat': '52.61240251',
-  'lng': '-1.714459875',
-  'name': 'Drayton Manor',
-  'website': 'https://www.draytonmanor.co.uk/zoo/'},
- {'lat': '50.82347303',
-  'lng': '0.1642421616',
-  'name': 'Drusillas',
-  'website': 'https://www.drusillas.co.uk/zoo/animals/red-panda'},
- {'lat': '52.01122717',
-  'lng': '0.5825231774',
-  'name': 'Woburn Safari Park',
-  'website': 'https://www.woburnsafari.co.uk/'},
- {'lat': '52.51328909',
-  'lng': '-2.077673859',
-  'name': 'Dudley Zoo',
-  'website': 'https://www.dudleyzoo.org.uk/animal/panda-red/'},
- {'lat': '51.280386',
-  'lng': '1.227871',
-  'name': 'Wingham Wildlife Park',
-  'website': 'https://winghamwildlifepark.co.uk/'},
- {'lat': '54.206171',
-  'lng': '-0.810176',
-  'name': 'Flamingo Land',
-  'website': 'https://www.flamingoland.co.uk/zoo/animals/mammals/red-panda/'},
- {'lat': '51.269885',
-  'lng': '1.156616898',
-  'name': 'Howletts Wild Animal Park',
-  'website': 'https://www.aspinallfoundation.org/port-lympne/wildlife-park/animals/red-panda/?_ga=2.169794788.455045825.1613657571-338416550.1613657571'},
- {'lat': '51.8505239',
-  'lng': '-0.5443716063',
-  'name': 'Whipsnade Zoo',
-  'website': 'https://www.zsl.org/zsl-whipsnade-zoo/exhibits/red-panda'},
- {'lat': '51.18872062',
-  'lng': '-2.263062251',
-  'name': 'Longleat',
-  'website': 'https://www.longleat.co.uk/'},
- {'lat': '50.99109199',
-  'lng': '-1.283356788',
-  'name': 'Marwell Zoo',
-  'website': 'https://www.marwell.org.uk/zoo/explore/animals/10/red-panda'},
- {'lat': '51.07846075',
-  'lng': '1.00073147',
-  'name': 'Port Lympne',
-  'website': 'https://www.aspinallfoundation.org/port-lympne/?_ga=2.41524001.20117271.1613658396-976390789.1613658396'},
- {'lat': '51.74410104',
-  'lng': '-0.0622571039',
-  'name': 'Paradise Wildlife Park',
-  'website': 'https://www.pwpark.com/map/'},
- {'lat': '50.17984057',
-  'lng': '-5.425152269',
-  'name': 'Paradise Park',
-  'website': 'https://paradisepark.org.uk/'},
- {'lat': '50.42793735',
-  'lng': '-3.582619569',
-  'name': 'Paignton Zoo',
-  'website': 'https://www.paigntonzoo.org.uk/'}]
+ ['Welsh Mountain Zoo', 53.27415428, -3.699849602],
+ ['Banham Zoo', 52.44479919, 1.075228087],
+ ['Folly Farm, Pembrokeshire', 51.7437438, -4.732819568],
+ ['Edinburgh Zoo', 55.94272648, -3.267564685],
+ ['Highland Wildlife Park', 57.10973138, -3.965497267],
+ ['Chester Zoo', 53.22683731, -2.883382348],
+ ['Belfast Zoo', 54.658159, -5.942979938],
+ ['Colchester Zoo', 51.86262047, 0.8339362763],
+ ['Cotswold Wildlife Park', 51.77387345, -1.653257479],
+ ['Yorkshire Wildlife Park', 53.50441743, -1.039960373],
+ ['Newquay Zoo', 50.41126832, -5.069944231],
+ ['Drayton Manor', 52.61240251, -1.714459875],
+ ['Drusillas', 50.82347303, 0.1642421616],
+ ['Woburn Safari Park', 52.01122717, 0.5825231774],
+ ['Dudley Zoo', 52.51328909, -2.077673859],
+ ['Wingham Wildlife Park', 51.280386, 1.227871],
+ ['Flamingo Land', 54.206171, -0.810176],
+ ['Howletts Wild Animal Park', 51.269885, 1.156616898],
+ ['Whipsnade Zoo', 51.8505239, -0.5443716063],
+ ['Longleat', 51.18872062, -2.263062251],
+ ['Marwell Zoo', 50.99109199, -1.283356788],
+ ['Port Lympne', 51.07846075, 1.00073147],
+ ['Paradise Wildlife Park', 51.74410104, -0.0622571039],
+ ['Paradise Park', 50.17984057, -5.425152269],
+ ['Paignton Zoo', 50.42793735, -3.582619569]
+]
 
+let latitude = 55.8642
+let longitude = 4.2518
 
 const success = (position) => {
-  const latitude  = position.coords.latitude;
-  const longitude = position.coords.longitude;
+  latitude  = position.coords.latitude;
+  longitude = position.coords.longitude;
   findNearestRedPanda({ latitude, longitude })
 }
 const error = () => {
   console.log(err)
-  debugger
 }
 const options = {}
 
 navigator.geolocation.getCurrentPosition(success, error, options)
 
-function findNearestRedPanda({ latitude, longitude }) {
+const distances = [{
 
+}]
+
+function findNearestRedPanda({ latitude, longitude }) {
+  const nearestRedPanda = NearestLocation(latitude, longitude, redPandaData);
 }
 
 function calculateDistance() {
   
 }
 
-const latitude = 55.8642
-const longitude = 4.2518
+const createListOfPandas = (pandas) => {
+  pandas.forEach({
+    
+  })
+  const listOfPandas = document.querySelector('.list-of-pandas')
+  const pandaListItem = document.createElement('li')
+  pandaListItem.appendChild(document.createTextNode('Abc'))
+  listOfPandas.appendChild(pandaListItem)
+}
 
-const nearestRedPanda = NearestLocation(latitude, longitude, redPandaData);
+createListOfPandas()
