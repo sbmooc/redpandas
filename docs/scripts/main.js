@@ -78,7 +78,7 @@ const distances = [{
 }]
 
 function findNearestRedPanda({ latitude, longitude }) {
-  const nearestRedPandas = NearestLocations(latitude, longitude, redPandaData).slice(0, 5)
+  return NearestLocations(latitude, longitude, redPandaData).slice(0, 5)
 }
 
 
