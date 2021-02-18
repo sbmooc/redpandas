@@ -87,7 +87,7 @@ const createListOfPandas = (pandas) => {
       const listOfPandas = document.querySelector('.list-of-pandas')
       const pandaListItem = document.createElement('li')
       const zooName = panda[0][0]
-      const distanceToZoo = panda[1]
+      const distanceToZoo = Math.ceil(panda[1])
       const distanceText = document.createElement('span')
       distanceText.classList.add('.distance')
       
