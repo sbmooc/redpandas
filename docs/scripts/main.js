@@ -20,7 +20,7 @@ function NearestLocations(latitude, longitude, locations) {
   var distances = [];
   for (index = 0; index < locations.length; ++index) {
     var dif =  PythagorasEquirectangular(latitude, longitude, locations[ index ][ 1 ], locations[ index ][ 2 ]);
-    distances.append([locations[index], dif])
+    distances.push([locations[index], dif])
   }
   // return the nearest location
   distances.sort(function(a, b) {
@@ -78,7 +78,7 @@ const distances = [{
 }]
 
 function findNearestRedPanda({ latitude, longitude }) {
-  const nearestRedPandas = NearestLocations(latitude, longitude, redPandaData).slice(0, 5)
+  return NearestLocations(latitude, longitude, redPandaData).slice(0, 5)
 }
 
 
