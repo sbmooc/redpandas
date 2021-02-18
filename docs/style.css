@@ -1,9 +1,20 @@
 html,
 body {
   font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  padding: 20px;
+  padding-top: 100px;
 }
 
 .logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
   max-width: 350px;
 }
 
@@ -12,6 +23,7 @@ body {
   justify-content: center;
   align-items: center;
   max-width: 450px;
+  padding-bottom: 25px;
 }
 
 .fourzerofour {
@@ -23,7 +35,7 @@ body {
 }
 
 ol {
-  max-width: 350px;
+  width: 100%;
   counter-reset: my-awesome-counter;
   list-style: none;
   padding-left: 40px;
