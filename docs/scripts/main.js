@@ -15,21 +15,18 @@ function PythagorasEquirectangular( lat1, lon1, lat2, lon2 ) {
   return d;
 }
 
-function NearestLocation(latitude, longitude, locations) {
+function NearestLocations(latitude, longitude, locations) {
   var mindif=99999;
-  var closest;
-
+  var distances = [];
   for (index = 0; index < locations.length; ++index) {
     var dif =  PythagorasEquirectangular(latitude, longitude, locations[ index ][ 1 ], locations[ index ][ 2 ]);
-    if ( dif < mindif ) {
-      closest=index;
-      mindif = dif;
-    }
+    distances.append([locations[index], dif])
   }
-
   // return the nearest location
-  var closestLocation = (locations[ closest ]);
-  return closestLocation;
+  distances.sort(function(a, b) {
+    return a[1] - b[1]
+  })
+  return distances;
 }
 
 const redPandaData = [
@@ -80,12 +77,9 @@ const distances = [{
 }]
 
 function findNearestRedPanda({ latitude, longitude }) {
-  const nearestRedPanda = NearestLocation(latitude, longitude, redPandaData);
+  const nearestRedPandas = NearestLocations(latitude, longitude, redPandaData).slice(0, 5)
 }
 
-function calculateDistance() {
-  
-}
 
 const createListOfPandas = (pandas) => {
   pandas.forEach({
