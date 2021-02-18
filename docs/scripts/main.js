@@ -68,6 +68,7 @@ const createPandaLocationsList = (pandaLocations) => {
 }
 
 const success = (position) => {
+  document.querySelector('.loading').style.display = 'none'
   const { latitude, longitude } = position.coords
   const fiveNearestRedPandaLocations = sortRedPandaLocationsByDistance(latitude, longitude, redPandaLocationData).slice(0, 5)
   createPandaLocationsList(fiveNearestRedPandaLocations)
