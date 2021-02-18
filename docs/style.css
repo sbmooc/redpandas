@@ -1,0 +1,15 @@
+html,
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.logo {
+  max-width: 350px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 450px;
+}
