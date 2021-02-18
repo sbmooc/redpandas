@@ -63,7 +63,8 @@ let longitude = 4.2518
 const success = (position) => {
   latitude  = position.coords.latitude;
   longitude = position.coords.longitude;
-  findNearestRedPanda({ latitude, longitude })
+  pandas = findNearestRedPanda({ latitude, longitude })
+  createListOfPandas(pandas)
 }
 const error = () => {
   console.log(err)
@@ -82,13 +83,12 @@ function findNearestRedPanda({ latitude, longitude }) {
 
 
 const createListOfPandas = (pandas) => {
-  pandas.forEach({
-    
-  })
-  const listOfPandas = document.querySelector('.list-of-pandas')
-  const pandaListItem = document.createElement('li')
-  pandaListItem.appendChild(document.createTextNode('Abc'))
-  listOfPandas.appendChild(pandaListItem)
+  pandas.forEach(
+    () => {
+      const listOfPandas = document.querySelector('.list-of-pandas')
+      const pandaListItem = document.createElement('li')
+      pandaListItem.appendChild(document.createTextNode(pandas[0]))
+      listOfPandas.appendChild(pandaListItem)
+    }
+  )
 }
-
-createListOfPandas()
