@@ -13,3 +13,11 @@ body {
   align-items: center;
   max-width: 450px;
 }
+
+.fourzerofour {
+  display: flex;
+  margin-top:100px;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+}
