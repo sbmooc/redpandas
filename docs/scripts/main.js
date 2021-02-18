@@ -86,7 +86,12 @@ const createListOfPandas = (pandas) => {
     (panda) => {
       const listOfPandas = document.querySelector('.list-of-pandas')
       const pandaListItem = document.createElement('li')
-      pandaListItem.appendChild(document.createTextNode(panda))
+      const zooName = panda[0][0]
+      const distanceToZoo = panda[1]
+      const distanceText = document.createElement('span')
+      distanceText.classList.add('.distance')
+      
+      pandaListItem.appendChild(document.createTextNode(zooName))
       listOfPandas.appendChild(pandaListItem)
     }
   )
