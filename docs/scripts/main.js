@@ -91,7 +91,7 @@ const createListOfPandas = (pandas) => {
       const distanceText = document.createElement('span')
       distanceText.classList.add('.distance')
       
-      pandaListItem.appendChild(document.createTextNode(`${zooName} ${distanceToZoo}km`))
+      pandaListItem.appendChild(document.createTextNode(`${zooName} (${distanceToZoo}km)`))
       listOfPandas.appendChild(pandaListItem)
     }
   )
