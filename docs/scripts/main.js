@@ -30,7 +30,7 @@ const convertDegreesToRadians = (degrees) => {
   return degrees * Math.PI / 180
 }
 
-const PythagorasEquirectangular = (lat1, lon1, lat2, lon2) => {
+const calculatePythagorasEquirectangular = (lat1, lon1, lat2, lon2) => {
   lat1 = convertDegreesToRadians(lat1)
   lat2 = convertDegreesToRadians(lat2)
   lon1 = convertDegreesToRadians(lon1)
@@ -45,7 +45,7 @@ const PythagorasEquirectangular = (lat1, lon1, lat2, lon2) => {
 const sortRedPandaLocationsByDistance = (latitude, longitude, locations) => {
   const distances = []
   for (index = 0; index < locations.length; ++index) {
-    const dif = PythagorasEquirectangular(latitude, longitude, locations[index][1], locations[index][2])
+    const dif = calculatePythagorasEquirectangular(latitude, longitude, locations[index][1], locations[index][2])
     distances.push([locations[index], dif])
   }
   distances.sort((a, b) => {
