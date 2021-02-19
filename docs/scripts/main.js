@@ -18,10 +18,10 @@ const calculatePythagorasEquirectangular = (lat1, lon1, lat2, lon2) => {
 
 const sortRedPandaLocationsByDistance = (latitude, longitude, locations) => {
   const distances = []
-  for (index = 0; index < locations.length; ++index) {
-    const dif = calculatePythagorasEquirectangular(latitude, longitude, locations[index][1], locations[index][2])
-    distances.push([locations[index], dif])
-  }
+  locations.forEach((location) => {
+    const dif = calculatePythagorasEquirectangular(latitude, longitude, location[1], location[2])
+    distances.push([location, dif])
+  })
   distances.sort((a, b) => {
     return a[1] - b[1]
   })
